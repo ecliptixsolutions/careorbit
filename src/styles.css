@@ -1,0 +1,251 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-heading: var(--heading);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+  --color-purple: var(--purple);
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-foreground: var(--brand-red-foreground);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-foreground: var(--brand-blue-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1rem;
+
+  --background: #f6f9fc;
+  --surface: #ffffff;
+  --surface-secondary: #eef4fa;
+  --foreground: #334155;
+  --heading: #0b1f33;
+
+  --card: #ffffff;
+  --card-foreground: #334155;
+  --popover: #ffffff;
+  --popover-foreground: #334155;
+
+  --primary: #1677ff;
+  --primary-hover: #0f67e8;
+  --primary-soft: #eaf3ff;
+  --primary-foreground: #ffffff;
+
+  --brand-red: #7c6cf2;
+  --brand-red-foreground: #ffffff;
+  --brand-blue: #1677ff;
+  --brand-blue-foreground: #ffffff;
+
+  --secondary: #14b8a6;
+  --secondary-soft: #e6faf7;
+  --secondary-foreground: #ffffff;
+  --muted: #eef4fa;
+  --muted-foreground: #64748b;
+  --accent: #eaf3ff;
+  --accent-foreground: #0b1f33;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --info: #2563eb;
+  --purple: #7c6cf2;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1677ff;
+
+  --gradient-hero: linear-gradient(180deg, #f6f9fc 0%, #eef4fa 58%, #f6f9fc 100%);
+  --gradient-brand: linear-gradient(135deg, #1677ff 0%, #5b6cff 55%, #8b7cf6 100%);
+  --gradient-card: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+
+  --shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.06);
+  --shadow-md: 0 12px 30px -18px rgb(15 23 42 / 0.28);
+  --shadow-lg: 0 24px 60px -32px rgb(22 119 255 / 0.34);
+  --shadow-glow: 0 14px 32px -22px rgb(22 119 255 / 0.75);
+
+  --sidebar: #071a36;
+  --sidebar-foreground: #d9e7f7;
+  --sidebar-primary: #1677ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0b2854;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgb(255 255 255 / 0.1);
+  --sidebar-ring: #5b6cff;
+}
+
+.dark {
+  --background: #f6f9fc;
+  --foreground: #334155;
+  --card: #ffffff;
+  --card-foreground: #334155;
+  --popover: #ffffff;
+  --popover-foreground: #334155;
+  --primary: #1677ff;
+  --primary-soft: #eaf3ff;
+  --primary-foreground: #ffffff;
+  --secondary: #14b8a6;
+  --secondary-soft: #e6faf7;
+  --secondary-foreground: #ffffff;
+  --muted: #eef4fa;
+  --muted-foreground: #64748b;
+  --accent: #eaf3ff;
+  --accent-foreground: #0b1f33;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1677ff;
+  --brand-red: #7c6cf2;
+  --brand-red-foreground: #ffffff;
+  --brand-blue: #1677ff;
+  --brand-blue-foreground: #ffffff;
+  --sidebar: #071a36;
+  --sidebar-foreground: #d9e7f7;
+  --sidebar-primary: #1677ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0b2854;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgb(255 255 255 / 0.1);
+  --sidebar-ring: #5b6cff;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family:
+      Inter, "Plus Jakarta Sans", Manrope, ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--heading);
+    letter-spacing: 0;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  select {
+    min-height: 2.75rem;
+  }
+  button,
+  [role="button"] {
+    min-height: 2.5rem;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  .text-gradient-brand {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-lg);
+  }
+  .animate-fade-up {
+    animation: fade-up 0.55s ease-out both;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #pharmacy-invoice-print,
+  #pharmacy-invoice-print * {
+    visibility: visible;
+  }
+
+  #pharmacy-invoice-print {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+}

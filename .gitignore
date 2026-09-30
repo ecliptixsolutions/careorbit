@@ -1,0 +1,75 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.security-tools/
+security/results/
+test-results/
+__pycache__/
+*.pyc
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
+.npm-cache/
+hostinger-upload/
+hostinger-upload-optimized/
+oehealth-static-upload/
+*.zip
+*.log
+.env.local
+.vercel/
+hostinger_erp_test_ed25519
+hostinger_erp_test_ed25519.pub
+.env
+.env.*
+!.env.example
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.vercel
+.env*
+
+docs/CAREORBIT_QA_CREDENTIALS.md
+
+# Runtime / process artifacts
+devserver.pid
+*.pid
+query
+
+# Real data migration snapshot — contains PII/session data
+database/20260911_careorbit_missing_data_migration.sql
+
+# QA provisioning script contains plaintext QA passwords
+scripts/provision-qa-accounts.js
+
+# Generated documentation/report artifacts
+docs/*.pdf
+docs/*.docx
+docs/*.html
+docs/mysql-verification.json
+
+# Empty placeholder
+src/.gitignore
