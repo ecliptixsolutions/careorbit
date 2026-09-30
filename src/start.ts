@@ -8,7 +8,6 @@ const allowedOrigins = new Set(
     process.env.APP_ORIGIN,
     process.env.SITE_URL,
     process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
-    "https://janani-careorbit.vercel.app",
   ].filter(Boolean),
 );
 
